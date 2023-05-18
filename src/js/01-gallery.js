@@ -17,7 +17,7 @@ console.dir(ulGallery)
 
 ulGallery.insertAdjacentHTML("afterbegin", createImgPlate)
 
-let gallery = new SimpleLightbox('.gallery a', {
+const gallery = new SimpleLightbox('.gallery a', {
     captionsData: 'alt',
     captionDelay: 250,
     });

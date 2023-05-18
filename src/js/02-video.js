@@ -11,13 +11,10 @@ function onPlay({ seconds }) {
     const stringData = JSON.stringify(seconds);
     localStorage.setItem(VIDEO_TIME, stringData);
 }
-setCurrentTime()
-function setCurrentTime() {
-        if (!localStorage.getItem(VIDEO_TIME)){
-        return
-    };
-    player.setCurrentTime(localStorage.getItem(VIDEO_TIME))
-};
+
+
+player.setCurrentTime(localStorage.getItem(VIDEO_TIME), 0)
+
 
 
 

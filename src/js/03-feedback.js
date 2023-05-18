@@ -1,8 +1,5 @@
 
 const feedBackForm = document.querySelector('.feedback-form');
-/* const input = document.querySelector('input');
-const textArr = document.querySelector('textarea');
-const button = document.querySelector('button'); */
 
 const FORM_iNF = "feedback-form-state";
 
@@ -35,7 +32,9 @@ function onFormSub(evt) {
         email: feedBackForm.email.value,
         message: feedBackForm.message.value,
      };
-    
+    if (feedBackForm.email.value === '' || feedBackForm.message.value === '') {
+        return alert('Заповніть всі поля')
+    }
     localStorage.removeItem(FORM_iNF);
     feedBackForm.email.value = '';
     feedBackForm.message.value = '';
