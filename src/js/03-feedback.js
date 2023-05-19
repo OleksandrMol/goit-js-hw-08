@@ -31,10 +31,12 @@ function onFormSub(evt) {
      const formData = {
         email: feedBackForm.email.value,
         message: feedBackForm.message.value,
-     };
+    };
+    
     if (feedBackForm.email.value === '' || feedBackForm.message.value === '') {
         return alert('Заповніть всі поля')
     }
+    
     localStorage.removeItem(FORM_iNF);
     feedBackForm.email.value = '';
     feedBackForm.message.value = '';
